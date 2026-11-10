@@ -58,24 +58,24 @@ namespace OpalStudio.CustomToolbar.Editor.Settings
             {
                   // Groupe 0 : Version Control
                   var versionControlGroup = new ToolbarGroup { groupName = "Version Control", side = ToolbarSide.Left };
-                  versionControlGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarGitStatus).AssemblyQualifiedName });
+                  versionControlGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarGitStatus).AssemblyQualifiedName, isEnabled = false });
                   config.groups.Add(versionControlGroup);
 
                   // Groupe 1 : Utilities
                   var utilsGroup = new ToolbarGroup { groupName = "Utilities", side = ToolbarSide.Left };
                   utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarScreenshot).AssemblyQualifiedName });
-                  utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarClearPlayerPrefs).AssemblyQualifiedName });
-                  utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarSaveProject).AssemblyQualifiedName });
+                  utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarClearPlayerPrefs).AssemblyQualifiedName, isEnabled = false });
+                  utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarSaveProject).AssemblyQualifiedName, isEnabled = false });
                   utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarFindMissingReferences).AssemblyQualifiedName });
-                  utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarSceneBookmarks).AssemblyQualifiedName });
+                  utilsGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarSceneBookmarks).AssemblyQualifiedName, isEnabled = false });
                   config.groups.Add(utilsGroup);
 
                   // Groupe 2 : Scene Management
                   var sceneGroup = new ToolbarGroup { groupName = "Scenes", side = ToolbarSide.Left };
                   sceneGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarSceneSelection).AssemblyQualifiedName });
                   sceneGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarStartFromFirstScene).AssemblyQualifiedName });
-                  sceneGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarReloadScene).AssemblyQualifiedName });
-                  sceneGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarLayerVisibility).AssemblyQualifiedName });
+                  sceneGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarReloadScene).AssemblyQualifiedName, isEnabled = false });
+                  sceneGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarLayerVisibility).AssemblyQualifiedName, isEnabled = false });
                   config.groups.Add(sceneGroup);
 
                   // Groupe 3 : Controls bar
@@ -86,15 +86,15 @@ namespace OpalStudio.CustomToolbar.Editor.Settings
 
                   // Groupe 4 : Debugging
                   var debugGroup = new ToolbarGroup { groupName = "Debugging", side = ToolbarSide.Right };
-                  debugGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarEnterPlayMode).AssemblyQualifiedName });
-                  debugGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarRecompile).AssemblyQualifiedName });
-                  debugGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarReserializeAll).AssemblyQualifiedName });
+                  debugGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarEnterPlayMode).AssemblyQualifiedName, isEnabled = false });
+                  debugGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarRecompile).AssemblyQualifiedName, isEnabled = false });
+                  debugGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarReserializeAll).AssemblyQualifiedName, isEnabled = false });
                   config.groups.Add(debugGroup);
 
                   // Groupe 5: Toolbox
                   var toolboxGroup = new ToolbarGroup { groupName = "Toolbox", side = ToolbarSide.Right };
-                  toolboxGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarToolbox).AssemblyQualifiedName });
-                  toolboxGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarFavorites).AssemblyQualifiedName });
+                  toolboxGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarToolbox).AssemblyQualifiedName, isEnabled = false });
+                  toolboxGroup.elements.Add(new ToolbarElement { name = typeof(ToolbarFavorites).AssemblyQualifiedName, isEnabled = false });
                   config.groups.Add(toolboxGroup);
             }
       }
